@@ -1,10 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
 import styled from '@emotion/styled';
-
-const Murrika = styled.ul`
-  & > li:last-child {
-    font-weight: bold;
-  }
-`;
 
 const Credits = styled.p`
   text-align: right;
@@ -68,12 +63,12 @@ const About = (): JSX.Element => (
       would consider to be prosperity—y'know what? There's only four things we do better than anyone else
     </p>
     <p>
-      <Murrika>
+      <ul>
         <li>music</li>
         <li>movies</li>
         <li>microcode (software)</li>
         <li>high-speed pizza delivery</li>
-      </Murrika>
+      </ul>
     </p>
     <Credits>
       Stephenson, Neal. Snow Crash (p. 1). Random House Publishing Group. Kindle Edition. 

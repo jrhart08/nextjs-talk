@@ -8,10 +8,11 @@ function Copyright() {
     <Typography variant="body2" color="text.secondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
-        NextJS Example Site
+        Joseph Hart
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
+      <p>(Not really)</p>
     </Typography>
   );
 }

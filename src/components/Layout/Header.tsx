@@ -5,39 +5,58 @@ import {
   Typography,
   Container,
   Box,
+  Button,
 } from '@mui/material';
 import Link from 'next/link';
 import styled from '@emotion/styled';
+
+const MyAppBar = styled(AppBar)`
+  text-transform: uppercase;
+
+  a {
+    padding: 6px;
+  }
+  button {
+    color: white;
+  }
+`;
+
+const AppBarBox = styled(Box)`
+  flex-grow: 1;
+  display: flex;
+`;
 
 const HeaderLogo = () => (
   <Typography
     variant="h6"
     noWrap
     component="div"
-    sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
   >
     <Link href="/">
-      LOGO
+      (Logo)
     </Link>
   </Typography>
 );
 
 const Header = (): JSX.Element => {
-  const handleLogoClick = useCallback(() => {
-    alert('You clicked me!');
+  const notYetImplemented = useCallback(() => {
+    alert('Page not yet implemented. Come back soon!');
   }, []);
 
   return (
-    <AppBar position="sticky">
+    <MyAppBar position="sticky">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <HeaderLogo />
-          <Box>
-
-          </Box>
+          <AppBarBox>
+            <Link href="/">Home</Link>
+            <Link href="/about">About</Link>
+            <Link href="/catfact">Cat Facts</Link>
+            <Button onClick={notYetImplemented}>Crypto Wallet</Button>
+          </AppBarBox>
         </Toolbar>
       </Container>
-    </AppBar>
+    </MyAppBar>
   );
 };
 
