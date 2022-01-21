@@ -65,8 +65,8 @@ const About = ({ timestamp }: AboutProps): JSX.Element => (
       </p>
       <p>
         Why is the Deliverator so equipped? Because people rely on him. He is a roll model. This is America. 
-        People do whatever the <C>fuck</C> they feel like doing, you got a problem with that? Because they have a right to. 
-        And because they have guns and no one can <C>fucking</C> stop them. As a result, this country has one of the worst economies in the world. 
+        People do whatever the <C>REDACTED</C> they feel like doing, you got a problem with that? Because they have a right to. 
+        And because they have guns and no one can <C>REDACTED</C> stop them. As a result, this country has one of the worst economies in the world.
         When it gets down to it—talking trade balances here—once we've brain-drained all our technology into other countries, 
         once things have evened out, they're making cars in Bolivia and microwave ovens in Tadzhikistan and selling them here—once our edge 
         in natural resources has been made irrelevant by giant Hong Kong ships and dirigibles that can ship North Dakota all the way to New Zealand for a 
