@@ -1,5 +1,7 @@
 import { ReactNode } from 'react';
+import Header from './Header';
 import Footer from './Footer';
+import { Container } from '@mui/material';
 
 export interface LayoutProps {
   children: ReactNode;
@@ -8,7 +10,10 @@ export interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps): JSX.Element => (
   <div>
-    {children}
+    <Header />
+    <Container>
+      {children}
+    </Container>
     <Footer />
   </div>
 );
