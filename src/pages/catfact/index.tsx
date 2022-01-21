@@ -1,4 +1,5 @@
 import type { GetServerSidePropsContext } from 'next';
+import Head from 'next/head';
 import { useCallback, useState } from 'react';
 import { Button } from '@mui/material';
 import styled from '@emotion/styled';
@@ -42,6 +43,9 @@ const CatFact = ({ initialFact }: HelloProps): JSX.Element => {
 
   return (
     <>
+      <Head>
+        <title>Cat Facts!</title>
+      </Head>
       <FactArea>
         <h1>Hello, Inquirer!</h1>
         <p>

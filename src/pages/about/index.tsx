@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import type { GetStaticPropsContext } from 'next';
+import Head from 'next/head';
 import styled from '@emotion/styled';
 import { Section } from '../../components';
 
@@ -19,6 +20,9 @@ interface AboutProps {
 
 const About = ({ timestamp }: AboutProps): JSX.Element => (
   <div>
+    <Head>
+      <title>About Us</title>
+    </Head>
     <Section>
       <h1>
         About Us
