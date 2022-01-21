@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "node ./src/express-server.js",
     "lint": "next lint"
   },
   "dependencies": {
@@ -13,6 +13,7 @@
     "@emotion/server": "^11.4.0",
     "@emotion/styled": "^11.6.0",
     "@mui/material": "^5.3.0",
+    "express": "^4.17.2",
     "lodash": "^4.17.21",
     "next": "12.0.8",
     "react": "17.0.2",
