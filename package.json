@@ -4,8 +4,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "node ./src/express-server.js",
-    "lint": "next lint"
+    "start": "next start",
+    "lint": "next lint",
+    "express-demo": "node ./src/express-server.js"
   },
   "dependencies": {
     "@emotion/css": "^11.7.1",
