@@ -1,24 +1,20 @@
 import type { GetServerSidePropsContext } from 'next';
 import { useCallback, useState } from 'react';
-import { Button, Grid } from '@mui/material';
+import { Button } from '@mui/material';
 import styled from '@emotion/styled';
+import { Section } from '../../components';
 
 interface HelloProps {
-  // name: string;
   initialFact: string;
 }
 
-const Area = styled.div`
-  padding-bottom: 3em;
-`;
-
-const FactArea = styled(Area)`
+const FactArea = styled(Section)`
   & > p {
     min-height: 5em;
   }
 `;
 
-const ButtonArea = styled(Area)`
+const ButtonArea = styled(Section)`
   display: flex;
 
   & > div:first-child {
@@ -26,25 +22,23 @@ const ButtonArea = styled(Area)`
   }
 `;
 
-const CatFact = ({
-  // name,
-  initialFact,
-}: HelloProps): JSX.Element => {
+const CatFact = ({ initialFact }: HelloProps): JSX.Element => {
   const [fact, setFact] = useState(initialFact);
 
-  const getNewCatFact = useCallback(() => {
-    fetch('/api/animalFact?animal=cat')
+  const getNewFact = useCallback((animal: string) => {
+    fetch(`/api/animalFact?animal=${animal}`)
       .then((r) => r.json())
       .then(json => json.fact)
       .then(setFact);
   }, []);
 
+  const getNewCatFact = useCallback(() => {
+    getNewFact('cat');
+  }, [getNewFact]);
+
   const getNewDogFact = useCallback(() => {
-    fetch('/api/animalFact?animal=dog')
-      .then((r) => r.json())
-      .then(json => json.fact)
-      .then(setFact);
-  }, []);
+    getNewFact('dog');
+  }, [getNewFact]);
 
   return (
     <>
